@@ -5291,12 +5291,14 @@ h6 {
 .dropdowns.messaging--dropdown .message {
   padding: 20px;
   border-bottom: 1px solid #ececec;
-  display: block;
+  display: flex;
 }
 
 .dropdowns.messaging--dropdown .message .message__actions_avatar {
-  display: inline-block;
-  vertical-align: middle;
+  flex-basis: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .dropdowns.messaging--dropdown .message .message__actions_avatar .avatar {
@@ -5309,16 +5311,28 @@ h6 {
 }
 
 .dropdowns.messaging--dropdown .message .message_data {
-  display: inline-block;
-  vertical-align: middle;
+  flex-grow: 1;
 }
 
 .dropdowns.messaging--dropdown .message .message_data .name_time {
   margin-left: 13px;
 }
 
-.dropdowns.messaging--dropdown .message .message_data .name_time .name {
-  float: left;
+.dropdowns.messaging--dropdown .message .message_data .name_time>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 16px;
+  width: 275px;
+}
+
+.dropdowns.messaging--dropdown .message .message_data .name_time .time {
+  vertical-align: middle;
+    display: inline;
+  vertical-align: top;
+  font-size: 15px;
+  color: #0674ec;
+  margin-left: 5px;
 }
 
 .dropdowns.messaging--dropdown .message .message_data .name_time .name p {
@@ -5328,22 +5342,19 @@ h6 {
   color: #333333;
 }
 
-.dropdowns.messaging--dropdown .message .message_data .name_time .name span {
-  display: inline;
-  vertical-align: top;
-  font-size: 15px;
-  color: #0674ec;
-  margin-left: 5px;
+.dropdowns.messaging--dropdown .message .message_data .name_time .name span::before {
+  margin-bottom: 20px;
 }
 
 .dropdowns.messaging--dropdown .message .message_data .name_time .time {
-  float: right;
+  
   font-size: 14px;
 }
 
-.dropdowns.messaging--dropdown .message .message_data .name_time p {
-  clear: both;
-  display: block;
+.dropdowns.messaging--dropdown .message .message_data .name_time> p {
+  overflow: hidden;
+  width: 275px;  
+  text-overflow:  ellipsis;
 }
 
 .dropdowns.messaging--dropdown .message.recent .time {
@@ -11193,6 +11204,10 @@ span.counter {
   color: #747a86;
 }
 
+.thanglozviettemplatengunhucho {
+  width: 275px !important;
+}
+
 .notifications_module .notification .notification__info .info p span {
   color: #000;
   font-weight: 500;
@@ -11267,7 +11282,7 @@ span.counter {
 ****************************************/
 .message_area {
   background: #eff1f5;
-  padding: 80px 0  120px;
+  padding: 40px 0  120px;
 }
 
 .messaging_sidebar, .recent_message {
